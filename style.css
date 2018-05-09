@@ -2,24 +2,9 @@ body, ul {
   margin: 0;
 }
 
-body > *,
-ul,
-li,
-article,
-aside,
-header {
-  position: relative;
-}
-
 .aniram_logo img {
   width: 96px;
   height: 51px;
-}
-
-::before {
-  position: absolute;
-  line-height: 20px;
-  min-width: 30px;
 }
 
 p {
@@ -28,70 +13,31 @@ p {
 }
 
 header {
-  outline: 1px solid green;
   min-height: 20%;
   background-color: rgba(100, 100, 100, 0.5);
 }
 
-header::before {
-  content: "header";
-  background-color: rgba(100, 100, 100, 0.5);
-}
 
 ul {
-  outline: 2px dashed #963296;
   background-color: rgba(150, 50, 150, 0.1);
 }
 
-ul::before {
-  content: "ul";
-  background-color: rgba(150, 50, 150, 1);
-  right: -3px;
-  bottom: -3px;
-}
-
 li {
-  outline: 2px dotted #8a2be2;
   background-color: rgba(138, 43, 226, 0.1);
   list-style: none;
 }
 
-li::before {
-  content: "li";
-  background-color: rgba(138, 43, 226, 0.1);
-}
-
 main {
   min-height: 70%;
-  outline: 1px solid blue;
   display: flex;
   align-items: stretch;
   background-color: rgba(0, 0, 255, 0.1);
 }
 
-main::before {
-  content: "main";
-  background-color: rgba(0, 0, 255, 1);
-}
-
 footer {
   min-height: 10%;
-  outline: 3px solid #ff0000;
   background-color: rgba(255, 0, 0, 0.1);
   display: flex;
-}
-
-footer::before {
-  content: "footer";
-  background-color: red;
-}
-
-nav {
-  outline: 1px solid black;
-}
-
-article {
-  outline: 1px solid #aaa627;
 }
 
 main article {
@@ -99,20 +45,32 @@ main article {
   background-color: rgba(0, 255, 0, 0.2);
 }
 
-main article::before {
-  content: "Main window";
-  background-color: rgba(0, 255, 0, 0.5);
+.bth:hover {
+  background-color: #ffffff;
 }
 
-main article span {
-  padding-left: 100px;
+.btn:active {
+  color: #000000;
 }
 
-table, th, td {
-  border: 1px solid black;
+.gallery {
+  padding-left: 50px;
+  padding-right: 50px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
-nav li a {
-  padding-left: 20px;
+.gallery div {
+  margin: 10px;
 }
 
+.gallery-item img {
+  width: 250px;
+  height: 250px;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.5 );
+  transition-duration: 0.7s;
+}
