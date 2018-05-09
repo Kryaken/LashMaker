@@ -11,6 +11,11 @@ header {
   position: relative;
 }
 
+.aniram_logo img {
+  width: 96px;
+  height: 51px;
+}
+
 ::before {
   position: absolute;
   line-height: 20px;
@@ -94,7 +99,20 @@ main article {
   background-color: rgba(0, 255, 0, 0.2);
 }
 
-main article .about_me::before {
-  content: ".about.me";
+main article::before {
+  content: "Main window";
   background-color: rgba(0, 255, 0, 0.5);
 }
+
+main article span {
+  padding-left: 100px;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+nav li a {
+  padding-left: 20px;
+}
+
