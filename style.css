@@ -2,117 +2,177 @@ body, ul {
   margin: 0;
 }
 
-body > *,
-ul,
-li,
-article,
-aside,
-header {
-  position: relative;
-}
-
 .aniram_logo img {
   width: 96px;
   height: 51px;
 }
 
-::before {
-  position: absolute;
-  line-height: 20px;
-  min-width: 30px;
+div {
+  margin-left: 5px;
 }
 
 p {
   color: cyan;
   font-size: 23px;
 }
-
+/*Header */
 header {
-  outline: 1px solid green;
-  min-height: 20%;
-  background-color: rgba(100, 100, 100, 0.5);
+  min-height: 12%;
+  background-color: rgba(100, 100, 100, 0.1);
+  overflow: hidden;
 }
 
-header::before {
-  content: "header";
-  background-color: rgba(100, 100, 100, 0.5);
+header .aniram_logo {
+  display: block;
+  float: left;
+  padding: 10px 20px;
 }
 
-ul {
-  outline: 2px dashed #963296;
-  background-color: rgba(150, 50, 150, 0.1);
+header .contacts {
+  display: block;
+  float: right;
+  padding-right: 10px;
+
+}
+/*Header ends*/
+
+/*Side navigation menu */
+.main_menu {
+  padding: 15px;
+  margin: 0;
+  background: white;
+  width: 200px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,.1);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-ul::before {
-  content: "ul";
-  background-color: rgba(150, 50, 150, 1);
-  right: -3px;
-  bottom: -3px;
-}
-
-li {
-  outline: 2px dotted #8a2be2;
-  background-color: rgba(138, 43, 226, 0.1);
+.main_menu ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-li::before {
-  content: "li";
-  background-color: rgba(138, 43, 226, 0.1);
+.main_menu li {
+  margin: 12px 0 0 0px;
 }
+
+.main_menu a {
+  text-decoration: none;
+  display: block;
+  font-size: 13px;
+  color: rgba(0,0,0,.6);
+  padding: 5px;
+  position: relative;
+  transition: .3s linear;
+}
+
+.main_menu a:after {
+  content:"\f18e";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 5px;
+  color: white;
+  transition: .2s linear;
+}
+.main_menu a:hover {
+  background: #80C8A0;
+  color: white;
+}
+/*Side navigation menu ends*/
 
 main {
   min-height: 70%;
-  outline: 1px solid blue;
   display: flex;
   align-items: stretch;
-  background-color: rgba(0, 0, 255, 0.1);
-}
-
-main::before {
-  content: "main";
-  background-color: rgba(0, 0, 255, 1);
 }
 
 footer {
-  min-height: 10%;
-  outline: 3px solid #ff0000;
-  background-color: rgba(255, 0, 0, 0.1);
+  min-height: 15%;
+  background-color: rgba(100, 100, 100, 0.1);
   display: flex;
 }
 
-footer::before {
-  content: "footer";
-  background-color: red;
+/*Footer menu */
+.footer_menu {
+  background: rgba(255,255,255,.5);
+  box-shadow: 3px 0 7px rgba(0,0,0,.3);
+  padding: 20px;
+  width: 100%;
+}
+.footer_menu:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.navbar-logo {display: inline-block;}
+.footer_menu_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+.footer_menu_list li {display: inline-block;}
+.footer_menu_list a {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  line-height: 61px;
+  padding-left: 20px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-family: 'Arimo', sans-serif;
+  font-weight: bold;
+  color: #F73E24;
+  transition:.3s linear;
+}
+.footer_menu_list a:before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background: #F73E24;
+  position: absolute;
+  left: 50%;
+  transform: rotate(45deg) translateX(6.5px);
+  opacity: 0;
+  transition: .3s linear;
+}
+.footer_menu_list a:hover:before {
+  opacity: 1;
 }
 
-nav {
-  outline: 1px solid black;
-}
-
-article {
-  outline: 1px solid #aaa627;
-}
+/*Footer menu ends*/
 
 main article {
   width: 100%;
-  background-color: rgba(0, 255, 0, 0.2);
+  background-color: rgba(100, 100, 100, 0.3);
 }
 
-main article::before {
-  content: "Main window";
-  background-color: rgba(0, 255, 0, 0.5);
+.bth:hover {
+  background-color: #ffffff;
 }
 
-main article span {
-  padding-left: 100px;
+.btn:active {
+  color: #000000;
 }
 
-table, th, td {
-  border: 1px solid black;
+.gallery {
+  padding-left: 50px;
+  padding-right: 50px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
-nav li a {
-  padding-left: 20px;
+.gallery div {
+  margin: 10px;
 }
 
+.gallery-item img {
+  width: 250px;
+  height: 250px;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.5 );
+  transition-duration: 0.7s;
+}
