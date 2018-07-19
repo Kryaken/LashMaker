@@ -13,11 +13,36 @@ html, body, .wrapper {
 /* Header start*/
 header {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: space-around;
-    min-height: 50px;
+    min-height: 60px;
     margin-bottom: 55px;
     background-color: rgba(100, 100, 100, 0.1);
+}
+
+header div {
+    line-height: 60px;
+}
+
+.aniram_logo {
+    float: left;
+}
+
+.aniram_logo img {
+    width: 96px;
+    height: 51px;
+}
+
+.company_name {
+    color: green;
+    font-size: 23px;
+    float: left;
+    line-height: 60px;
+    margin-left: 10px;
+}
+
+.tel {
+
 }
 /* Header end*/
 
@@ -82,11 +107,11 @@ main {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    width: 800px;
 }
 
 .article-1 {
     background-color: rgba(100, 100, 100, 0.1);
-    width: 400px;
 }
 /* Main content end */
 
