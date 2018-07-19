@@ -2,39 +2,53 @@ body, ul {
   margin: 0;
 }
 
-.aniram_logo img {
-  width: 96px;
-  height: 51px;
+@media (max-width: 700px) {
+    .contacts {
+        display: none;
+    }
 }
 
-div {
-  margin-left: 5px;
-}
-
-p {
-  color: cyan;
-  font-size: 23px;
-}
 /*Header */
 header {
   min-height: 12%;
   background-color: rgba(100, 100, 100, 0.1);
   overflow: hidden;
+  display: flex;
+  justify-content: space-around;
 }
 
-header .aniram_logo {
-  display: block;
-  float: left;
-  padding: 10px 20px;
+header div {
+  display: flex;
 }
 
-header .contacts {
-  display: block;
-  float: right;
-  padding-right: 10px;
-
+header div * {
+    margin: auto;
 }
+
+.contacts {
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    color: #F73E24;
+}
+
+.aniram_logo img {
+    width: 96px;
+    height: 51px;
+}
+
+.company_name p {
+    color: green;
+    font-size: 23px;
+}
+
 /*Header ends*/
+
+/* Main content start*/
+
+.container {
+    min-height: 70%;
+    display: flex;
+}
 
 /*Side navigation menu */
 .main_menu {
@@ -80,12 +94,23 @@ header .contacts {
 }
 /*Side navigation menu ends*/
 
+
+
 main {
-  min-height: 70%;
-  display: flex;
-  align-items: stretch;
+    width: 100%;
+    background-color: rgba(100, 100, 100, 0.3);
+    display: flex;
+    flex-direction: column;
 }
 
+main article {
+    min-height: 150px;
+    padding: 10px;
+}
+
+/* Main container ends */
+
+/* Footer start */
 footer {
   min-height: 15%;
   background-color: rgba(100, 100, 100, 0.1);
@@ -104,7 +129,7 @@ footer {
   display: table;
   clear: both;
 }
-.navbar-logo {display: inline-block;}
+
 .footer_menu_list {
   list-style: none;
   margin: 0;
@@ -142,10 +167,8 @@ footer {
 
 /*Footer menu ends*/
 
-main article {
-  width: 100%;
-  background-color: rgba(100, 100, 100, 0.3);
-}
+/* Footer ends */
+
 
 .bth:hover {
   background-color: #ffffff;
